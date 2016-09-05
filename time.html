@@ -1,8 +1,6 @@
 <html>
 <head>
 <title>The Time</title>
-</head>
-<body>
 <script type="text/javascript">
 function GetClock(){
 var d=new Date();
@@ -11,6 +9,7 @@ if(nmin<=9) nmin="0"+nmin
 if(nsec<=9) nsec="0"+nsec;
 
 document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+":"+nsec+"";
+document.title=""+nhour+":"+nmin+":"+nsec+"";
 }
 
 window.onload=function(){
@@ -18,6 +17,8 @@ GetClock();
 setInterval(GetClock,1000);
 }
 </script>
+</head>
+<body>
 <div id="clockbox"></div>
 </body>
 </html>
