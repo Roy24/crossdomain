@@ -133,12 +133,11 @@
 <script>
 (function($){
 clTrack('a, button, #edit-submit', true);
-	function clTrack(e,d){var d=d||!1;$("html").on({click:function(e){
-		var c = ((e.target.innerText) ? e.target.innerText : e.target.value),
-    	//var c= e.target.innerText,                        //category
-       	      a= e.type,                                          //action
-        	      l= e.target.baseURI,                         //label
-       	      v= 0;                                                 //value
+	function clTrack(e,d){var d=d||!1;$("html").on({click:function(e){	
+    	var c = ((event.target.id == "edit-submit") ? e.target.value : e.target.innerText),                       //category
+	a= e.type,                                          //action
+	l= e.target.baseURI,                         //label
+	v= 0;                                                 //value
     	d?(console.log(c,a,l,v),console.log(e)):ga("send","event",c,a,l,v)}},e)}
 }) (jQuery);
 </script>
