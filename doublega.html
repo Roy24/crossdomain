@@ -134,7 +134,7 @@
 (function($){
 clTrack('a, button, #edit-submit', true);
 	function clTrack(e,d){var d=d||!1;$("html").on({click:function(e){
-    	var c= e.target.innerText,                        //category
+    	var c= e.target.value,                        //category
        	      a= e.type,                                          //action
         	      l= e.target.baseURI,                         //label
        	      v= 0;                                                 //value
