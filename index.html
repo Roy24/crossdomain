@@ -10,10 +10,10 @@
 
     <title>Crossdomain by Roy24</title>
     <script>
-      function getClientIdFromUrl(name) {
-  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+      function getClientIdFromUrl() {
+  return decodeURIComponent((new RegExp('[?|&]' + 'ClientId' + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 }
-      alert(getClientIdFromUrl('ClientId'));
+      alert(getClientIdFromUrl());
     </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
