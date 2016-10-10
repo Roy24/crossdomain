@@ -13,17 +13,21 @@
       function getClientIdFromUrl() {
   return decodeURIComponent((new RegExp('[?|&]' + 'ClientId' + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 }
-      alert(getClientIdFromUrl() + ' test');
     </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-82224272-3', 'auto', {'allowLinker': true}, {
-  'clientId': getClientIdFromUrl('ClientId')
-});
+ 
+  var gacid = getClientIdFromUrl();
+  if (gacid) {
+     ga('create', 'UA-82224272-3', 'auto', {'allowLinker': true}, {
+      'clientId': gacid});
+    console.log('test');
+  }else {
+    console.log('test2');
+  }
   ga('require', 'linker');
   ga('linker:autoLink', ['gardiensdelaube.net'] );
   ga('send', 'pageview');
