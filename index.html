@@ -21,14 +21,16 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
  
   var gacid = getClientIdFromUrl();
-  if (gacid) {
+  
+     ga('create', 'UA-82224272-3', 'auto', {'clientId': gacid });
+ /* if (gacid) {
      ga('create', 'UA-82224272-3', 'auto', {'clientId': gacid });
     console.log(gacid);
   } else {
      ga('create', 'UA-82224272-3', 'auto', {'allowLinker': true});
     
     console.log(gacid);
-  }
+  }*/
   
   /*ga('require', 'linker');
   ga('linker:autoLink', ['gardiensdelaube.net'] );*/
