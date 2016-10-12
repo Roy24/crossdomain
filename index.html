@@ -43,14 +43,11 @@ var google_replace_number="08 44 10 10 10";
 </script>
 <script>
 if(window.location.href.indexOf("crossdomain") > -1) {
+
   var checkExist = setInterval(function() {
-   if (document.getElementsByClassName('anchor').length) {
-      console.log("Exists!");
-     //ga('send', 'event', 'formulaire de contact', 'rempli');
+   if (document.getElementById('test')) {
+      goog_report_conversion();
       clearInterval(checkExist);
-   } else {
-     console.log("No!");
-   }
   }, 1000);
 }
 </script>
@@ -72,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body>
 
     <header>
-      <div class="container">
+      <div class="container" id="test">
         <h1>Crossdomain</h1>
         <h2>Alpha tetra omega</h2>
 
