@@ -42,16 +42,6 @@ var google_replace_number="08 44 10 10 10";
 (function(a,e,c,f,g,h,b,d){var k={ak:"875559666",cl:"zEhCCLyqqmoQ8vW_oQM"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
 </script>
 <script>
-  var checkExist = setInterval(function() {
-   if (document.getElementById('test') && document.getElementById('test').value) {
-      //goog_report_conversion();
-     console.log('test ok');
-      clearInterval(checkExist);
-   } else {
-     console.log('no');
-     consoloe.log(document.getElementById('test'));
-   }
-  }, 1000);
 if(window.location.href.indexOf("crossdomain") > -1) {
 
 
@@ -138,6 +128,19 @@ var google_remarketing_only = false;
 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/872549910/?label=BuLiCP79wWoQlpyIoAM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+    <script>
+      
+  var checkExist = setInterval(function() {
+   if (document.getElementById('test') && document.getElementById('test').value) {
+      //goog_report_conversion();
+     console.log('test ok');
+      clearInterval(checkExist);
+   } else {
+     console.log('no');
+     consoloe.log(document.getElementById('test'));
+   }
+  }, 1000);
+    </script>
 
   </body>
 </html>
