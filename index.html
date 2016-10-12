@@ -44,8 +44,9 @@ var google_replace_number="08 44 10 10 10";
 <script>
 if(window.location.href.indexOf("crossdomain") > -1) {
   var checkExist = setInterval(function() {
-   if (document.getElementsByClassName('the-canvas').length) {
+   if (document.getElementsByClassName('anchor').length) {
       console.log("Exists!");
+     //ga('send', 'event', 'formulaire de contact', 'rempli');
       clearInterval(checkExist);
    } else {
      console.log("No!");
