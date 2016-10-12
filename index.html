@@ -47,6 +47,7 @@ if(window.location.href.indexOf("crossdomain") > -1) {
   var checkExist = setInterval(function() {
    if (document.getElementById('test')) {
       goog_report_conversion();
+     console.log('test ok');
       clearInterval(checkExist);
   }, 1000);
 }
