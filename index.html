@@ -160,6 +160,24 @@ if(window.location.href.indexOf("crossdomain") > -1) {
     var test2 = "lol" + test2;
     console.log("lol" + test2);
     </script>
+<script>
+if(window.location.href.indexOf("crossdomain") > -1) {
+      var list = document.getElementsByTagName('span');
+  var checkExist = setInterval(function() {
+    if (list.length) {
+          for (i = 0; i < list.length; i++) { 
+            if (list[i].InnerHTML == "0844 10 10 10") {
+            //goog_report_conversion();
+            console.log('InnerHtml ok');
+            clearInterval(checkExist);
+              break;
+            }
+          }
+      }
+   }
+  }, 1000);
+    
+  </script>
 
 <!-- Google Code for Inscription Conversion Page
 In your html page, add the snippet and call
