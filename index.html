@@ -93,6 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Alpha tetra omega</h2>
 
         <section id="downloads">
+          <a href="http://kaydoom.com?test=test" class="btn">Go to not here</a>
           <a href="http://www.gardiensdelaube.net/viewtopic.php?f=5&p=745#p745" class="btn">Go to GdA</a>
           <a href="https://github.com/Roy24/crossdomain/zipball/master" class="btn">Download as .zip</a>
           <a href="https://github.com/Roy24/crossdomain/tarball/master" class="btn">Download as .tar.gz</a>
@@ -163,11 +164,9 @@ if(window.location.href.indexOf("crossdomain") > -1) {
 <script>
 if(window.location.href.indexOf("crossdomain") > -1) {
       var list = document.getElementsByTagName('span');
-  console.log(list);
   var checkExist2 = setInterval(function() {
     if (list.length) {
           for (i = 0; i < list.length; i++) { 
-            console.log(list[i].innerHTML);
             if (list[i].innerHTML == "0844 10 10 10") {
             //goog_report_conversion();
             console.log('InnerHtml ok');
