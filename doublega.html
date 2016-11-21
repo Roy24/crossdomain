@@ -9,19 +9,57 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <title>Crossdomain by Roy24</title>
-    
+
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-82224272-3', 'auto');
-  ga('send', 'pageview');
-
+  
+  dataLayer = [];
 </script>
     
+<script>
+// Measure a view of product details. This example assumes the detail view occurs on pageload,
+// and also tracks a standard pageview of the details page.
+	/*
+dataLayer.push({
+  'ecommerce': {
+    'detail': {
+      'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
+      'products': [{
+        'name': 'Triblend Android T-Shirt',         // Name or ID is required.
+        'id': '12345',
+        'price': '15.25',
+        'brand': 'Google',
+        'category': 'Apparel',
+        'variant': 'Gray'
+       }]
+     }
+   }
+});*/
+	
+dataLayer.push({
+      'products-test': [{
+        'name': 'Triblend Android T-Shirt',         // Name or ID is required.
+        'id': '12345',
+        'price': '15.25',
+        'brand': 'Google',
+        'category': 'Apparel',
+        'variant': 'Gray'
+       }]
+})
+</script>
+    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7255P');</script>
+<!-- End Google Tag Manager -->
   </head>
+  
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7255P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <body>
 
@@ -131,7 +169,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
-(function($){
+/*(function($){
 clTrack('a, button, #edit-submit', true);
 	function clTrack(e,d){var d=d||!1;$("html").on({click:function(e){	
     	var c = ((e.target.id == "edit-submit") ? e.target.value : e.target.innerText),                       //category
@@ -139,7 +177,7 @@ clTrack('a, button, #edit-submit', true);
 	l= e.target.baseURI,                         //label
 	v= 0;                                                 //value
     	d?(console.log(c,a,l,v),console.log(e)):ga("send","event",c,a,l,v)}},e)}
-}) (jQuery);
+}) (jQuery);*/
 </script>
     
   </body>
