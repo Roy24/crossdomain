@@ -33,10 +33,10 @@
   }*/
   
      ga('create', 'UA-82224272-3', 'auto', 'aloa');
-  ga("require", "ecommerce");
+  ga("require", "ecommerce", 'aloa');
   ga("ecommerce:addTransaction", {id: "1186", revenue: "1018", affiliation: "Gîtes de France Vosges", shipping: "0.00", tax: "31.33", currency: "EUR"});
 ga("ecommerce:addItem", {id: "1186", name: "Hébergement de test (Splitfire)", sku: "H00G005073", category: "Gîte", price: "1018", quantity: "1", currency: "EUR"});
- ga("ecommerce:send")
+ ga("ecommerce:send", 'aloa')
   
 ga('aloa.send', 'pageview');
   
