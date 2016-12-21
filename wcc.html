@@ -9,7 +9,7 @@
 <script> 
  
   function phonenumber(inputtxt) {
-  var phoneno = \d{3}[-. ]{3}(\d\s*)*;
+  var phoneno = /\d{3}[-. ]{3}(\d\s*)*/;
   if(inputtxt.match(phoneno)) {
     console.log("ok");
     return true;
