@@ -10,14 +10,20 @@
  
   function phonenumber(inputtxt) {
   var phoneno = /\d{3}[-. ]{3}(\d\s*)*/;
-  if(inputtxt.match(phoneno)) {
+var matches = [], found;
+while (found = phoneno.exec(inputtxt)) {
+    matches.push(found[0]);
+    phoneno.lastIndex = found.index+1;
+}
+    console.log(matches);
+  /*if(inputtxt.match(phoneno)) {
     console.log("ok ");
     return true;
   }  
   else {  
     alert("message");
     return false;
-  }
+  }*/
 }
   </script>
     
@@ -25,13 +31,13 @@
   </head>
 <body>
 
-<p class="uk-text-small">
+<p class="uk-text-small" id="phone">
   <strong>München Zentrum</strong>
   <br>Tel.: 089 - 23 23 27 77<br>
   <strong>München Pasing</strong>
   <br>Tel.: 089 - 88 99 83 0
 </p>
-  <p id="phone"> 089 - 23 23 27 77</p>
+  <p id="phone2"> 089 - 23 23 27 77</p>
     <script>var getnumber = document.getElementById("phone").innerHTML;
       console.log(getnumber);
       phonenumber(getnumber);
