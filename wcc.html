@@ -11,19 +11,19 @@
   function phonenumber(inputtxt) {
   var phoneno = /\d{3}[-. ]{3}(\d\s*)*/;
 var matches = [], found;
-while (found = phoneno.exec(inputtxt)) {
+/*while (found = phoneno.exec(inputtxt)) {
     matches.push(found[0]);
     phoneno.lastIndex = found.index+1;
-}
-    console.log(matches);
-  /*if(inputtxt.match(phoneno)) {
+}*/
+   // console.log(matches);
+  if(inputtxt.match(phoneno)) {
     console.log("ok ");
     return true;
   }  
   else {  
     alert("message");
     return false;
-  }*/
+  }
 }
   </script>
     
