@@ -15,7 +15,8 @@ var matches = [], found;
     matches.push(found[0]);
     phoneno.lastIndex = found.index+1;
 }*/
-   // console.log(matches);
+    var matches = inputtxt.match(phoneno);
+    console.log(matches);
   if(inputtxt.match(phoneno)) {
     console.log("ok ");
     return true;
