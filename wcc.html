@@ -6,10 +6,23 @@
 
 
     <title>WCC by Roy24</title>
+<script> 
+ 
+  function phonenumber(inputtxt) {
+  var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  if(inputtxt.value.match(phoneno)) {
+    return true;
+  }  
+  else {  
+    alert("message");
+    return false;
+  }
+}
+  </script>
     
     
   </head>
-
+<body>
 
 <p class="uk-text-small">
   <strong>München Zentrum</strong>
@@ -17,6 +30,10 @@
   <strong>München Pasing</strong>
   <br>Tel.: 089 - 88 99 83 0
 </p>
-    
+  <input type="text" id="phone"/>
+  <p id="phone">089 - 88 99 83 0</p>
+    <script>var getnumber = document.getElementById("phone").innerHtml;
+      phonenumber(getnumber);
+  </script>
   </body>
 </html>
