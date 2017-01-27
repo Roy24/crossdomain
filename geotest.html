@@ -71,6 +71,55 @@
       </section>
     </div>
 
+    
+    <div class="map_canvas"></div>
+    
+    <form>
+      <input id="geocomplete" type="text" placeholder="Type in an address" value="111 Broadway, New York, NY" />
+      <input id="find" type="button" value="find" />
+      
+      <fieldset>
+        <label>Latitude</label>
+        <input name="lat" type="text" value="">
+      
+        <label>Longitude</label>
+        <input name="lng" type="text" value="">
+      
+        <label>Formatted Address</label>
+        <input name="formatted_address" type="text" value="">
+      </fieldset>
+      
+      <a id="reset" href="#" style="display:none;">Reset Marker</a>
+    </form>
+    
+    <script>
+      $(function(){
+        $("#geocomplete").geocomplete({
+          map: ".map_canvas",
+          details: "form ",
+          markerOptions: {
+            draggable: true
+          }
+        });
+        
+        $("#geocomplete").bind("geocode:dragged", function(event, latLng){
+          $("input[name=lat]").val(latLng.lat());
+          $("input[name=lng]").val(latLng.lng());
+          $("#reset").show();
+        });
+        
+        
+        $("#reset").click(function(){
+          $("#geocomplete").geocomplete("resetMarker");
+          $("#reset").hide();
+          return false;
+        });
+        
+        $("#find").click(function(){
+          $("#geocomplete").trigger("geocode");
+        }).click();
+      });
+    </script>
 
   </body>
 </html>
