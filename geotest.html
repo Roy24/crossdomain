@@ -114,6 +114,11 @@
           $("#reset").show();
         });
         
+        $("#geocomplete").bind("geocode:click", function(event, latLng){
+          $("input[name=lat]").val(latLng.lat());
+          $("input[name=lng]").val(latLng.lng());
+          $("#reset").show();
+        });
         
         $("#reset").click(function(){
           $("#geocomplete").geocomplete("resetMarker");
