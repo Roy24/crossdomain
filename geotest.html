@@ -104,6 +104,7 @@
         $("#geocomplete").geocomplete({
           map: ".map_canvas",
           details: "form ",
+          types: ["geocode", "establishment"],
           markerOptions: {
             draggable: true
           }
@@ -118,6 +119,7 @@
         $("#geocomplete").bind("geocode:click", function(event, latLng){
           $("input[name=lat]").val(latLng.lat());
           $("input[name=lng]").val(latLng.lng());
+          $("input[name=name]").val(latLng.lng());          
           $("#reset").show();
         });
         
