@@ -30,13 +30,13 @@
      ga('create', 'UA-82224272-3', 'auto', {'allowLinker': true});
     
     console.log(gacid);
-  }*/
+  }
   
      ga('create', 'UA-82224272-3', 'auto', 'aloa');
- /* ga("aloa.require", "ecommerce");
+  ga("aloa.require", "ecommerce");
   ga("aloa.ecommerce:addTransaction", {id: "1186", revenue: "1018", affiliation: "Gîtes de France Vosges", shipping: "0.00", tax: "31.33", currency: "EUR"});
 ga("aloa.ecommerce:addItem", {id: "1186", name: "Hébergement de test (Splitfire)", sku: "H00G005073", category: "Gîte", price: "1018", quantity: "1", currency: "EUR"});
- ga("aloa.ecommerce:send", 'aloa')*/
+ ga("aloa.ecommerce:send", 'aloa')
   
 ga('aloa.send', 'pageview');
   
@@ -200,7 +200,7 @@ In your html page, add the snippet and call
 goog_report_conversion when someone clicks on the
 chosen link or button. -->
 <script type="text/javascript">
-  /* <![CDATA[ *
+  /* <![CDATA[ */
   goog_snippet_vars = function() {
     var w = window;
     w.google_conversion_id = 123456789;
@@ -236,34 +236,7 @@ if(window.location.href.indexOf("reserver") > -1) {
    	goog_report_conversion_alpha();
   })
 }          
-</script>
-    
-<!-- Google Code for Achat/Vente Conversion Page -->
-<script type="text/javascript">
-var OxOrderID = 123456 ; //The order number. 
-var OxOrderSubTotal = 100.00 ; //Total before tax of items in shopping carts. 
-/* <![CDATA[ */
-var google_conversion_id = 123456789;
-var google_conversion_language = "en";
-var google_conversion_format = "1";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "kCYfCL62RBDSttP4Aw";
-var google_conversion_value = OxOrderSubTotal;
-var google_conversion_currency = "EUR";
-var google_remarketing_only = false;
-     if (OxOrderID) {
-         var google_conversion_order_id = OxOrderID;
-    }
-
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1058331474/?value=1.00&amp;currency_code=EUR&amp;label=kCYfCL62RBDSttP4Aw&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
+    </script>
     
 <script>
   (function(a,e,c,f,g,h,b,d){var k={ak:"132456789",cl:"LtEuCKmE8W0Qh7_ryAM"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet2","_googWcmAk","script");
