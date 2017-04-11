@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript">
+//<![CDATA[
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+
+    var _gaq = _gaq || [];
+    _gaq.push(["_setAccount", "UA-123456789-1"]);
+    _gaq.push(["_trackPageview", "/checkout/onepage/success/"]);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_gaq.push(["_addTrans","J00398689","","177.9000","29.6500","0.0000","Paris","","FR"]);
+_gaq.push(["_addItem","J00398689","CONDOR-","Toboggan X-stream 3,80m de glisse - AMCA","","148.2500","1.0000"]);
+_gaq.push(["_trackTrans"]);
+//]]></script>
+</head>
+</html>
