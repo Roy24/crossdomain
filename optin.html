@@ -16,13 +16,15 @@
 <script type="text/javascript" src="https://apis.google.com/js/platform.js?onload=renderOptIn" async="async" defer="defer" gapi_processed="true"></script>
 <script type="text/javascript">
 /*<![CDATA[*/
+	var cmd = Math.floor((Math.random() * 10000) + 1);
+	console.log(cmd);
           window.renderOptIn = function() {
             window.gapi.load('surveyoptin', function() {
               window.gapi.surveyoptin.render(
                 {
                   // REQUIRED
                   "merchant_id": 113307123,
-                  "order_id": Math.floor((Math.random() * 10000) + 1);,
+                  "order_id": cmd,
                   "email": "xmarechal@google.com",
                   "delivery_country": "FR",
                   "estimated_delivery_date": "2017-05-10",
