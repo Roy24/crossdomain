@@ -33,6 +33,12 @@ ga('send', 'pageview');
           'price': '29.90',                 // Unit price.
           'quantity': '1'                   // Quantity.
         });
+        ga('ecommerce:addItem', {   
+          'id': '1234',                     // Transaction ID. Required.
+          'name': 'Something else',    // Product name. Required
+          'price': '19.90',                 // Unit price.
+          'quantity': '1'                   // Quantity.
+        });
         ga('ecommerce:send');
     </script>
         
