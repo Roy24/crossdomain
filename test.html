@@ -57,7 +57,7 @@ chosen link or button. -->
 window.addEventListener("load", gTracking, false);
 function gTracking() {
 	jQuery( '#ct' ).one( 'click', function() {
-		ga('send','event','category','action',);
+		goog_report_conversion();
 	});
 }
 </script>
