@@ -21,7 +21,7 @@
     
   </head>
 
-<iframe id="destination-frame" src="http://wp-implementation.mymovietimeline.com/iframe_test.html"></iframe>
+<iframe id="destination-frame" src="https://www.mymovietimeline.com/php/index.html"></iframe>
 
 <script>
 /*//ga('create', 'UA-82636217-7', 'auto');
@@ -42,7 +42,7 @@ ga(function(tracker) {
   var clientId = tracker.get('clientId');
 
   // Gets a reference to the window object of the destionation iframe.
-  var frameWindow = document.getElementById('i-frameappli').contentWindow;
+  var frameWindow = document.getElementById('destination-frame').contentWindow;
 
   // Sends the client ID to the window inside the destination frame.
   frameWindow.postMessage(clientId, 'https://www.mymovietimeline.com');
