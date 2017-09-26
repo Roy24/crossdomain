@@ -14,7 +14,9 @@
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
   
-  gtag('config', 'UA-82636217-2');
+  gtag('config', 'UA-82636217-2', {
+  'custom_map': {'dimension1': 'product_size'}
+});
   
 </script>
     
@@ -35,7 +37,8 @@
       "list_position": 1,
       "brand": "Google",
       "category": "Cat1/Cat2",
-      "variant": "Black, M",
+      "variant": "Black",
+      "product_size": "M",
       "quantity": 2,
       "price": '10'
     },
@@ -46,7 +49,8 @@
       "list_position": 2,
       "brand": "MyBrand",
       "category": "Cat1/Cat2",
-      "variant": "Red, L",
+      "variant": "Red",
+      "product_size": "L",
       "quantity": 1,
       "price": '10.0'
     }
