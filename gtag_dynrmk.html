@@ -15,10 +15,10 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-2', {
-  'custom_map': {'dimension3': 'ecomm_prodid',
-                'dimension4': 'ecomm_pagetype',
-                'dimension5': 'ecomm_totalvalue',
-                'dimension6': 'ecomm_category'}
+  'custom_map': {'dimension2': 'ecomm_prodid',
+                'dimension3': 'ecomm_pagetype',
+                'dimension4': 'ecomm_totalvalue',
+                'dimension5': 'ecomm_category'}
 });
   
 </script>
@@ -32,6 +32,7 @@ gtag('event', 'age_dimension', {
   'ecomm_pagetype': 'home',
   'ecomm_totalvalue': g_value,
   'ecomm_category': 'Is home a real category?',
+  'non_interaction': true
   
 });
 </script>
@@ -45,10 +46,10 @@ gtag('event', 'age_dimension', {
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-2', {
-  'custom_map': {'dimension3': 'ecomm_prodid',
-                'dimension4': 'ecomm_pagetype',
-                'dimension5': 'ecomm_totalvalue',
-                'dimension6': 'ecomm_category'}
+  'custom_map': {'dimension2': 'ecomm_prodid',
+                'dimension3': 'ecomm_pagetype',
+                'dimension4': 'ecomm_totalvalue',
+                'dimension5': 'ecomm_category'}
 });
   
 </code>
@@ -57,12 +58,12 @@ gtag('event', 'age_dimension', {
 <hr />
 <pre><code>     
 
-gtag('event', 'age_dimension', {
+gtag('event', 'dynRmk', {
   'ecomm_prodid': 'product ID',
   'ecomm_pagetype': 'home',
   'ecomm_totalvalue': '100.0',
   'ecomm_category': 'Is home a real category?',
-  
+  'non_interaction': true
 });
 </code>
 </pre>
