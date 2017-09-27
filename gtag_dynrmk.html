@@ -7,92 +7,62 @@
     <title>gtag Test</title>
     
 <!-- Google Code for Google analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82636217-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-2', {
-  'custom_map': {'dimension1': 'product_size'}
+  'custom_map': {'dimension3': 'ecomm_prodid',
+                'dimension4': 'ecomm_pagetype',
+                'dimension5': 'ecomm_totalvalue',
+                'dimension6': 'ecomm_category'}
 });
   
 </script>
     
     <script>
       var g_id = Math.floor(Math.random() * 20000);
-  gtag('event', 'purchase', {
-  "transaction_id": g_id,
-  "affiliation": "Optional",
-  "value": 30,
-  "currency": "EUR",
-  "tax": 2.20,
-  "shipping": 0,
-  "items": [
-    {
-      "id": "superId1",
-      "name": "Cool product 1",
-      "list_name": "Search Results",      
-      "list_position": 1,
-      "brand": "Google",
-      "category": "Cat1/Cat2",
-      "variant": "Black",
-      "product_size": "M",
-      "quantity": 2,
-      "price": '10'
-    },
-    {
-      "id": "P67890",
-      "name": "Still a cool product",
-      "list_name": "Search Results",
-      "list_position": 2,
-      "brand": "MyBrand",
-      "category": "Cat1/Cat2",
-      "variant": "Red",
-      "product_size": "L",
-      "quantity": 1,
-      "price": '10.0'
-    }
-  ]
+      var g_value = Math.floor(Math.random() * 200);
+gtag('event', 'age_dimension', {
+  'ecomm_prodid': g_id,
+  'ecomm_pagetype': 'home',
+  'ecomm_totalvalue': g_value,
+  'ecomm_category': 'Is home a real category?',
+  
 });
 </script>
   </head>
   
 <pre><code>
-  gtag('event', 'purchase', {
-  "transaction_id": "1234",
-  "affiliation": "Optional",
-  "value": 30,
-  "currency": "EUR",
-  "tax": 2.20,
-  "shipping": 0,
-  "items": [
-    {
-      "id": "superId1",
-      "name": "Cool product 1",
-      "list_name": "Search Results",      
-      "list_position": 1,
-      "brand": "Google",
-      "category": "Cat1/Cat2",
-      "variant": "Black, M",
-      "product_size": "M", // CUSTOM DIMENSION
-      "quantity": 2,
-      "price": '10'
-    },
-    {
-      "id": "P67890",
-      "name": "Still a cool product",
-      "list_name": "Search Results",
-      "list_position": 2,
-      "brand": "MyBrand",
-      "category": "Cat1/Cat2",
-      "variant": "Red, L",
-      "product_size": "L", // CUSTOM DIMENSION
-      "quantity": 1,
-      "price": '10.0'
-    }
-  ]
+
+<!-- Google Code for Google analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82636217-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82636217-2', {
+  'custom_map': {'dimension3': 'ecomm_prodid',
+                'dimension4': 'ecomm_pagetype',
+                'dimension5': 'ecomm_totalvalue',
+                'dimension6': 'ecomm_category'}
 });
+  
+</script>
+     <script>
+      var g_id = Math.floor(Math.random() * 20000);
+      var g_value = Math.floor(Math.random() * 200);
+gtag('event', 'age_dimension', {
+  'ecomm_prodid': g_id,
+  'ecomm_pagetype': 'home',
+  'ecomm_totalvalue': g_value,
+  'ecomm_category': 'Is home a real category?',
+  
+});
+</script>
 </code>
 </pre>
    
