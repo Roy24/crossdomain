@@ -14,12 +14,8 @@
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
 
-  gtag('config', 'UA-82636217-2', {
-  'custom_map': {'dimension2': 'ecomm_prodid',
-                'dimension3': 'ecomm_pagetype',
-                'dimension4': 'ecomm_totalvalue',
-                'dimension5': 'ecomm_category'}
-});
+  gtag('config', 'UA-82636217-2'});
+  gtag('config', 'AW-123456789');
 </script>
     
     
@@ -27,12 +23,15 @@
       var g_id = Math.floor(Math.random() * 20000);
       var g_value = Math.floor(Math.random() * 200);
 gtag('event', 'dynRMK', {
-  'ecomm_prodid': g_id,
-  'ecomm_pagetype': 'home',
-  'ecomm_totalvalue': g_value,
-  'ecomm_category': 'Is home a real category?',
   'non_interaction': true
-  
+});
+      
+gtag('event', 'view_item', {
+  "aw_customParameters": {
+    "color": "red",
+    "size": "medium"
+  },
+  "send_to": "AW-953774234"
 });
 </script>
   </head>
@@ -44,12 +43,8 @@ gtag('event', 'dynRMK', {
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
 
-  gtag('config', 'UA-82636217-2', {
-  'custom_map': {'dimension2': 'ecomm_prodid',
-                'dimension3': 'ecomm_pagetype',
-                'dimension4': 'ecomm_totalvalue',
-                'dimension5': 'ecomm_category'}
-});
+  gtag('config', 'UA-82636217-2'});
+  gtag('config', 'AW-123456789');
   
 </code>
 </pre>
@@ -57,12 +52,16 @@ gtag('event', 'dynRMK', {
 <hr />
 <pre><code>     
 
-gtag('event', 'dynRmk', {
-  'ecomm_prodid': 'product ID',
-  'ecomm_pagetype': 'home',
-  'ecomm_totalvalue': '100.0',
-  'ecomm_category': 'Is home a real category?',
+gtag('event', 'dynRMK', {
   'non_interaction': true
+});
+      
+gtag('event', 'view_item', {
+  "aw_customParameters": {
+    "color": "red",
+    "size": "medium"
+  },
+  "send_to": "AW-953774234"
 });
 </code>
 </pre>
