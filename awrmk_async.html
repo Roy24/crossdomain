@@ -1,0 +1,31 @@
+
+<html>
+<head>
+<title>CT test</title>
+
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+
+</head>
+<body>
+<button id="ct">Click me please</button>
+
+<script type="text/javascript">
+window.addEventListener("load", gTracking, false);
+function gTracking() {
+	jQuery( '#ct' ).one( 'click', function() {
+		window.google_trackConversion({
+      google_conversion_id: 123456789,
+      google_custom_params: {
+        parameter1: 'abc123',
+        parameter2: 29.99
+      },
+      google_remarketing_only: true
+    });
+	});
+}
+</script>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
+
+</body>
