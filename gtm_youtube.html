@@ -30,20 +30,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="getMyText">
 </div>
   
-    <script>      
-document.getElementById("shareY").addEventListener("click", spreadTheV);
-function spreadTheV() {
-  var theI = document.getElementById("yURL").value;
-  console.log(theI);
-  var re = new RegExp("/^.*(youtu\.be\/|.+v=)([a-zA-Z0-9]+)$");
-  var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-  if (re.test(theI)){
-    var result = re.exec(theI);
-    console.log(result);
-      document.getElementById("youtubeIframe").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + result[2] +'" frameborder="0" allowfullscreen></iframe>';
+<script type="text/javascript">   
+  window.addEventListener("load", gTracking, false); 
+  function gTracking() {
+    document.getElementById("shareY").addEventListener("click", spreadTheV);
+    function spreadTheV() {
+      var theI = document.getElementById("yURL").value;
+      console.log(theI);
+      var re = new RegExp("/^.*(youtu\.be\/|.+v=)([a-zA-Z0-9]+)$");
+      var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      if (re.test(theI)){
+        var result = re.exec(theI);
+        console.log(result);
+          document.getElementById("youtubeIframe").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + result[2] +'" frameborder="0" allowfullscreen></iframe>';
+      }
+    }
   }
-}
-    </script>
+  </script>
   
   </body>
 </html>
