@@ -20,9 +20,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 document.getElementById("shareY").addEventListener("click", spreadTheV);
 function spreadTheV() {
   var theI = document.getElementById("yURL").value;
+  console.log(theI);
   var re = new RegExp("^.*youtu\.be\/([a-zA-Z0-9]+)$|.*v=([a-zA-Z0-9]+)$");
   if (re.test(theI)){
     var result = re.exec(theI);
+    console.log(result);
       document.getElementById("youtubeIframe").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + result[0] +'" frameborder="0" allowfullscreen></iframe>';
   }
 }
