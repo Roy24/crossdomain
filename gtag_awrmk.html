@@ -15,7 +15,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-2');
-  gtag('config', 'AW-123456789');
+  //gtag('config', 'AW-123456789');
 </script>
     
     
@@ -23,13 +23,17 @@
       var g_id = Math.floor(Math.random() * 20000);
       var g_value = Math.floor(Math.random() * 200);
 gtag('event', 'dynRMK', {
+  'ecomm_prodid': g_id,
+  'ecomm_pagetype': 'home',
+  'ecomm_totalvalue': g_value,
   'non_interaction': true,
-  "send_to": "UA-82636217-2"
-});
-      
-gtag('event', 'view_item', {
+  "send_to": "UA-82636217-2",
   "send_to": "AW-123456789"
 });
+      
+/*gtag('event', 'view_item', {
+  "send_to": "AW-123456789"
+});*/
 </script>
   </head>
   
@@ -40,7 +44,7 @@ gtag('event', 'view_item', {
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-2');
-  gtag('config', 'AW-123456789');
+  
 
 </code>
 </pre>
