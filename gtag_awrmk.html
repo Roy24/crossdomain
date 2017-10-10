@@ -26,7 +26,6 @@ gtag('event', 'dynRMK', {
   'ecomm_prodid': g_id,
   'ecomm_pagetype': 'home',
   'ecomm_totalvalue': g_value,
-  'non_interaction': true,
   "send_to": "AW-123456789"
 });
       
@@ -41,8 +40,6 @@ gtag('event', 'dynRMK', {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
-
-  gtag('config', 'UA-82636217-2');
   
 
 </code>
@@ -51,10 +48,9 @@ gtag('event', 'dynRMK', {
 <hr />
 <pre><code>   
 gtag('event', 'dynRMK', {
-  'non_interaction': true
-});
-      
-gtag('event', 'view_item', {
+  'ecomm_prodid': '1324QfjI',
+  'ecomm_pagetype': 'home',
+  'ecomm_totalvalue': 150,
   "send_to": "AW-123456789"
 });
 </code>
