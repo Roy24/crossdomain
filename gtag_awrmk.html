@@ -34,14 +34,14 @@ gtag('event', 'dynRMK', {
 });*/
 </script>
   </head>
-  
+  <div> Check the network tab in the developper tools of your browser.</div><hr />
 <pre><code>
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
   
-
+// No need of the config line to avoid sending a remarketing tag without parameters
 </code>
 </pre>
 
