@@ -16,7 +16,7 @@
   gtag('js', new Date());
 
   //gtag('config', 'UA-82636217-2');
-  gtag('config', 'AW-123456789');
+  gtag('config', 'AW-123456789',{'send_page_view': false});
 </script>
     
     
@@ -26,8 +26,7 @@
 gtag('event', 'dynRMK', {
   'ecomm_prodid': g_id,
   'ecomm_pagetype': 'home',
-  'ecomm_totalvalue': g_value,
-  "send_to": "AW-123456789"
+  'ecomm_totalvalue': g_value
 });
       
 /*gtag('event', 'view_item', {
