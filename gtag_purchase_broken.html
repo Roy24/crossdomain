@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+
+    <title>gtag Test</title>
+    
+<!-- Google Code for Google analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82636217-2', {
+  'custom_map': {'dimension1': 'product_size'}
+});
+  
+</script>
+    
+    <script>
+      var g_id = Math.floor(Math.random() * 20000);
+  gtag('event', 'purchase', {
+  "transaction_id": g_id,
+  "affiliation": "Optional",
+  "value": 30,
+  "currency": "EUR",
+  "tax": 2.20,
+  "shipping": 0,
+  "items": [
+    {
+      "id": "superId1",
+      "name": "Cool product 1",
+      "list_name": "Search Results",      
+      "list_position": 1,
+      "brand": "Google",
+      "category": "Cat1/Cat2",
+      "variant": "Black",
+      "product_size": "M",
+      "quantity": 2,
+      "price": '10'
+    },
+    {
+      "id": "P67890",
+      "name": "Still a cool product",
+      "list_name": "Search Results",
+      "list_position": 2,
+      "brand": "MyBrand",
+      "category": "Cat1/Cat2",
+      "variant": "Red",
+      "product_size": "L",
+      "quantity": 1,
+      "price": '10.0'
+    }
+  ]
+});
+</script>
+  </head>
+  
+<pre><code>
+  gtag('event', 'purchase', {
+  "transaction_id": "1234",
+  "affiliation": "Optional",
+  "value": 30,
+  "currency": "EUR",
+  "tax": 2.20,
+  "shipping": 0,
+  "items": [
+    {
+      "id": "superId1",
+      "name": "Cool product 1",
+      "list_name": "Search Results",      
+      "list_position": 1,
+      "brand": "Google",
+      "category": "Cat1/Cat2",
+      "variant": "Black, M",
+      "product_size": "M", // CUSTOM DIMENSION
+      "quantity": 2
+      "price": '10'
+    },
+    {
+      "id": "P67890",
+      "name": "Still a cool product",
+      "list_name": "Search Results",
+      "list_position": 2,
+      "brand": "MyBrand",
+      "category": "Cat1/Cat2",
+      "variant": "Red, L",
+      "product_size": "L", // CUSTOM DIMENSION
+      "quantity": 1,
+      "price": '10.0'
+    }
+  ]
+});
+</code>
+</pre>
+   
+  </body>
+</html>
