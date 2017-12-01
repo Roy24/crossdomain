@@ -7,6 +7,13 @@
 
     
     <title>gtag Test</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-53PQZD');</script>
+<!-- End Google Tag Manager -->
     
 <!-- Google Code for Google analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
@@ -112,6 +119,13 @@
       'transaction_id': g_id
   });
 </script>
+  
+  <script>
+    dataLayer.push({
+      'orderValue': '30',
+      'orderId' : g_id
+    });
+  </script>
 
 
   </body>
