@@ -18,11 +18,12 @@
   gtag('config', 'UA-82636217-2', {
   'custom_map': {'dimension1': 'product_size'}
 });  
+  gtag('config', 'AW-854061937');
   
 </script>
     
     <script>
-      var g_id = Math.floor(Math.random() * 20000);
+   var g_id = Math.floor(Math.random() * 20000);
   gtag('event', 'purchase', {
   "transaction_id": g_id,
   "affiliation": "Optional",
@@ -98,5 +99,20 @@
 </code>
 </pre>
    
+  
+  
+
+
+<!-- Event snippet for Purchase conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-854061937/O52cCJ3igXoQ8eaflwM',
+      'value': 30,
+      'currency': 'EUR',
+      'transaction_id': g_id
+  });
+</script>
+
+
   </body>
 </html>
