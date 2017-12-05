@@ -38,9 +38,14 @@ function gtag_report_conversion(url) {
 	
 </head>
 <body>
-	<button id="ct" onclick="gtag_report_conversion()">Click me please</button>
+	<button id="ct">Click me please</button>
 	
-	
+	<script>
+	jQuery('#ct').one( "click", function() {
+  gtag_report_conversion();
+		console.log('test');
+});
+	</script>
 		
 	
 </body>
