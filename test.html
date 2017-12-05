@@ -38,13 +38,18 @@ function gtag_report_conversion(url) {
 	
 </head>
 <body>
+
 	<button id="ct">Click me please</button>
 	
 	<script>
-	jQuery('#ct').one( "click", function() {
+	/*jQuery('#MyForm').one( "submit", function() {
   gtag_report_conversion();
 		console.log('test');
-});
+}); */
+	document.querySelectorAll('#ct').onclick = function(){
+                gtag_report_conversion();
+		console.log('test');
+	}
 	</script>
 		
 	
