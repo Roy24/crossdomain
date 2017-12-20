@@ -23,6 +23,37 @@
   });
 	
 </script>	
+	
+	<script>
+		goog.provide("trackers.google_tag_manager");
+goog.require("trackers.dataLayer");
+trackers.google_tag_manager.inject = function() {
+    var script = document.createElement("script"),
+        i = document.getElementsByTagName("script")[0];
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-984088490";
+    i.parentNode.insertBefore(script, i);
+};
+trackers.google_tag_manager.start = function(prodid, pagetype, totalvalue) {
+    trackers.google_tag_manager.inject();
+    var dataLayer = trackers.dataLayer.get();
+   function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-984088490');
+    gtag('config', 'AW-1071953575');
+    gtag('config', 'AW-1009170236');
+    gtag('config', 'AW-1041457315');
+
+    gtag('event', 'page_view', {
+        send_to: ['AW-984088490', 'AW-1071953575','AW-1009170236','AW-1041457315'],
+        ecomm_prodid: prodid || '',
+        ecomm_pagetype: pagetype || '',
+        ecomm_totalvalue: totalvalue || ''
+    });
+};
 
 </head>
 
