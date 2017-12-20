@@ -21,7 +21,13 @@
     ecomm_prodid: ['12345', '45678'],
     ecomm_totalvalue: 345.89, 
     ecomm_pagetype: 'cart'
-  });
+  });    
+	gtag('event', 'page_view', {
+        send_to: ['AW-984088490', 'AW-1071953575','AW-1009170236','AW-1041457315'],
+        ecomm_prodid: prodid || '',
+        ecomm_pagetype: pagetype || '',
+        ecomm_totalvalue: totalvalue || ''
+    });
 	
 </script>	
 	<script>
