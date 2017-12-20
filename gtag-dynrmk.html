@@ -35,6 +35,7 @@ trackers.google_tag_manager.inject = function() {
     script.src = "https://www.googletagmanager.com/gtag/js?id=AW-984088490";
     i.parentNode.insertBefore(script, i);
 };
+		
 trackers.google_tag_manager.start = function(prodid, pagetype, totalvalue) {
     trackers.google_tag_manager.inject();
     var dataLayer = trackers.dataLayer.get();
