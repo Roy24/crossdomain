@@ -7,12 +7,23 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123456-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-123456-1');
+</script>
 	
 </head>
 <body>
 
-	<button id="ct">Click me please</button>
+	<button id="ct" onClick="gtag('event', 'aaa', {
+  'event_category' : 'bbb',
+  'event_label' : 'ccc'
+});">Click me please</button>
 	
 	<script>
 	/*jQuery('#MyForm').one( "submit", function() {
