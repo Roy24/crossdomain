@@ -20,17 +20,19 @@
 </head>
 <body>
 
-	<button id="ct" onClick="gtag('event', 'aaa', {
-  'event_category' : 'bbb',
-  'event_label' : 'ccc'
-});">Click me please</button>
+	<button id="ct">Click me please</button>
 	
 	<script>
 	/*jQuery('#MyForm').one( "submit", function() {
   gtag_report_conversion();
 		console.log('test');
 }); */
-	document.querySelectorAll('#ct').onclick = function(){
+	document.querySelector('#ct').onclick = function(){
+		gtag('event', 'aaa', {
+  			'event_category' : 'bbb',
+  			'event_label' : 'ccc'
+		});
+
 	}
 	</script>
 	
