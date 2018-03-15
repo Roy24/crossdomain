@@ -3,15 +3,41 @@
 <head>
 <title>CT test</title>
  
+<!-- Global site tag (gtag.js) - Google AdWords: 875206672 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-875206672"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<script type="text/javascript">
-(function(a,e,c,f,g,h,b,d){var k={ak:"875206672",cl:"FT4mCJLL-34QkLCqoQM",autoreplace:"01 23 45 67 98"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
+  gtag('config', 'AW-875206672');
 </script>
+<!-- Event snippet for Clicks on phone number conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-875206672/RLZeCLO6-H4QkLCqoQM',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 
 
 </head>
 <body>
- <p>My phone number is 01 23 45 67 98!!!</p>
+ <p>My phone number is <a id="phone" href='#'>01 23 45 67 98</a>!!!</p>
  
+ <script>
+  document.querySelector('#phone').onClick = gtag_report_conversion();
+  </scrit>
 </body>
 </html>
