@@ -27,6 +27,7 @@
   <strong>München Pasing</strong>
   <br>Tel.: 09 81 46 54 25
 </p>
+  <a href="#" id='whatever'>Click me please</a>
   
   
 
@@ -35,6 +36,14 @@
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-875206672/Q_aPCJXdgH8QkLCqoQM'});
 </script>
+  <script>
+ if(window.location.href.indexOf("conversion") > -1) {  
+  document.querySelector("#whatever").onclick = function() {
+      gtag('event', 'conversion', {'send_to': 'AW-875206672/n82wCP3_g38QkLCqoQM'});
+  };
+  //document.getElementById("FORM_CONTACT").onsubmit = function() {goog_report_conversion();};
+}  
+  </script>
 
 
   
