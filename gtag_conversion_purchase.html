@@ -15,11 +15,13 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-2');  
-  
+  gtag('config', 'AW-875206672');
 </script>
     
     <script>
    var g_id = Math.floor(Math.random() * 20000);
+   var transactionvalue = Math.floor(Math.random() * 100);
+      
   gtag('event', 'purchase', {
   "transaction_id": g_id,
   "affiliation": "Optional",
@@ -57,11 +59,33 @@
 </script>
   </head>
   
-<pre><code>
-
+<pre>
+<code>
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-875206672/YdX3CNPogH8QkLCqoQM',
+          'value': transactionvalue,
+          'currency': 'EUR',
+          'transaction_id': g_id
+      });
+    </script>
 </code>
 </pre>
 
 
+  
+
+
+<!-- Event snippet for Transaction conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-875206672/YdX3CNPogH8QkLCqoQM',
+      'value': transactionvalue,
+      'currency': 'EUR',
+      'transaction_id': g_id
+  });
+</script>
+
+  
   </body>
 </html>
