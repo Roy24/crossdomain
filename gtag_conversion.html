@@ -17,7 +17,7 @@
   gtag('config', 'AW-875206672');
 </script>
     
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 <body>
 
@@ -29,6 +29,8 @@
 </p>
   <a href="#" id='whatever'>Click me please</a>
   
+  <a href="#" id='jqueryTest'>jQuery is awesome</a>
+  
   
 
 
@@ -36,6 +38,8 @@
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-875206672/Q_aPCJXdgH8QkLCqoQM'});
 </script>
+  
+  
   <script>
  if(window.location.href.indexOf("conversion") > -1) {  
   document.querySelector("#whatever").onclick = function() {
@@ -44,6 +48,16 @@
   //document.getElementById("FORM_CONTACT").onsubmit = function() {goog_report_conversion();};
 }  
   </script>
+  
+  <script type="text/javascript">
+jQuery( document ).ready(function() {
+	if(window.location.href.indexOf("conversion") > -1) {
+		jQuery( '#jqueryTest' ).one( 'click', function() {
+      gtag('event', 'conversion', {'send_to': 'AW-875206672/n82wCP3_g38QkLCqoQM'});
+		});
+	}  
+});
+</script>
 
 
   
