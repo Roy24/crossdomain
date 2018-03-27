@@ -20,12 +20,21 @@
 <body>
 
 	
-	<button id="ct" onclick="gta('event', 'My first action', {
-  'event_category' : 'My first category'
-});">Click me please</button>
+	<button id="ct">Click me please</button>
 	
 
-		
+<script>
+
+window.addEventListener("load", gTracking, false);
+function gTracking() {	
+		  document.querySelector("#ct").onclick = function() {
+			  gtag('event', 'My second action', {
+				  'event_category' : 'My first category'
+				});
+		  };
+};
+	
+</script>
 	
 </body>
 </html>
