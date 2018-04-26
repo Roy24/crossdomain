@@ -40,6 +40,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 
+   var g_id = Math.floor(Math.random() * 20000);
+	
+	dataLayer.push({
+		'conversionValue': g_id 
+	});
 /*window.addEventListener("load", gTracking, false);
 function gTracking() {	
 		  document.querySelector("#ct").onclick = function() {
