@@ -1,14 +1,14 @@
 <html>
 <head>	
 	<script>
-		var cookieValues;
+		var cookieValues = '';
 		var gac = '_gac_UA-82636217-7';
 		var gTimeStamp = Date.now();
 		window.getCookie = function(name) {
 			match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
 			if (match) return match[2];
 		}
-		if (getCookie('_ga')) cookieValues += '?_gts= ' + gTimeStamp + ' &_ga=' + getCookie('_ga');		
+		if (getCookie('_ga')) cookieValues += '?_gts=' + gTimeStamp + ' &_ga=' + getCookie('_ga');		
 		if (getCookie('_gid')) cookieValues += '&_gid=' + getCookie('_ga');	
 		if (getCookie(gac)) cookieValues += '&' + gac + '=' + getCookie('_ga');
 
