@@ -30,6 +30,11 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-82636217-7', {
+	  if (_gts && (Date.now() - _gts < (30*60*1000))) {
+		if (getUrlParam('_cid')){
+	  		_cid = getUrlParam('_cid');
+	  		'client_id': _cid,
+	  }
   'linker': {
     'domains': ['vddigi.com', 'github.io', 'mymovietimeline.com']
   }
