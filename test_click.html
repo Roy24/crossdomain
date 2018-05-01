@@ -1,28 +1,22 @@
 <html>
 <head>	
-	
+
 	<script>
-		var cookieValues = '';
-		var gac = '_gac_UA-82636217-7';
 		var gTimeStamp = Date.now();
 		window.getCookie = function(name) {
-			match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-			if (match) return match[2];
+			match = document.cookie.match(new RegExp('^' + name + '=GA\\d\\.\\d\\.([^;]+)'));
+			if (match) return match[1];
 		}
-		if (getCookie('_ga')) cookieValues += '?_gts=' + gTimeStamp + ' &_ga=' + getCookie('_ga');		
-		if (getCookie('_gid')) cookieValues += '&_gid=' + getCookie('_ga');	
-		if (getCookie(gac)) cookieValues += '&' + gac + '=' + getCookie('_ga');
+		var _ga = getCookie('_ga');
+		if (_ga) var cookieValues = '?_gts=' + gTimeStamp + '&_cid=' + _ga;
 
 
 		function getUrlParam(param) { 
 			return decodeURIComponent((new RegExp('[?|&]' + param + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 		  }
-		  var gac = '_gac_UA-82636217-7';
 		  var _gts = (getUrlParam('_gts'));
 		  if (_gts && (Date.now() - _gts < (30*60*1000))) {
-			if (getUrlParam('_ga')) document.cookie = "_ga=" + getUrlParam('_ga');
-			if (getUrlParam(gac)) document.cookie = gac + "=" + getUrlParam(gac);
-			if (getUrlParam('_gid')) document.cookie = "_gid=" + getUrlParam('_gid');
+			if (getUrlParam('_cid')) _cid = getUrlParam('_cid');
 		  }
 	</script>
 <title>CT test</title>
