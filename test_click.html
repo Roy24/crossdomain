@@ -12,6 +12,7 @@
 		if (getCookie('_gid')) cookieValues += '&_gid=' + getCookie('_ga');	
 		if (getCookie(gac)) cookieValues += '&' + gac + '=' + getCookie('_ga');
 
+
 		function getUrlParam(param) { 
 			return decodeURIComponent((new RegExp('[?|&]' + param + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 		  }
