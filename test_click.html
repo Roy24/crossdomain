@@ -12,6 +12,7 @@
 		function getUrlParam(param) { 
 			return decodeURIComponent((new RegExp('[?|&]' + param + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 		  }
+		
 		  var _gts = (getUrlParam('_gts'));
 		  if (_gts && (Date.now() - _gts < (30*60*1000))) {
 			if (getUrlParam('_cid')) _cid = getUrlParam('_cid');
