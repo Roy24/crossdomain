@@ -63,20 +63,18 @@ var gObserver = new MutationObserver(function(mutations){
       if (mutations[i].addedNodes[j].tagName == "IFRAME"){
         console.log(mutations[i].addedNodes[j].src);
         if (mutations[i].addedNodes[j].src.indexOf(targetHost) > -1) {
-	function comeBack(error) {
-		if(!error){
-		  var tracker, linker;
-		  tracker = error.getAll()[0];
-		  linker = new window.gaplugins.Linker(tracker);
-		  mutations[i].addedNodes[j].src = linker.decorate(mutations[i].addedNodes[j].src);
-        		console.log(mutations[i].addedNodes[j].src);
-		  observer.disconnect();
-		}
-		else {
-		    var gobj = window[window.GoogleAnalyticsObject];
-		    comeBack(gobj); // re-call the function to test the if
-		}
-	    }
+	  var checkExist = setInterval(function() {
+	    var gobj = window[window.GoogleAnalyticsObject];
+		if (gobj){		
+			var tracker, linker;
+			tracker = error.getAll()[0];
+			linker = new window.gaplugins.Linker(tracker);
+			mutations[i].addedNodes[j].src = linker.decorate(mutations[i].addedNodes[j].src);
+			console.log(mutations[i].addedNodes[j].src);
+			observer.disconnect();
+		      clearInterval(checkExist);
+	   	} 
+	  }, 100);
 	}
       }
     }
