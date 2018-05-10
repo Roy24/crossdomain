@@ -65,6 +65,7 @@ var gObserver = new MutationObserver(function(mutations){
       if (mutations[i].addedNodes[j].tagName == "IFRAME"){
         console.log(mutations[i].addedNodes[j].src);
         if (mutations[i].addedNodes[j].src.indexOf(targetHost) > -1) {
+		var a = mutations[i].addedNodes[j];
 	  var checkExist = setInterval(function() {
 	    var gobj = window[window.GoogleAnalyticsObject];
 		console.log(gobj);
@@ -72,8 +73,8 @@ var gObserver = new MutationObserver(function(mutations){
 			var tracker, linker;
 			tracker = gobj.getAll()[0];
 			linker = new window.gaplugins.Linker(tracker);
-			mutations[i].addedNodes[j].src = linker.decorate(mutations[i].addedNodes[j].src);
-			console.log(mutations[i].addedNodes[j].src);
+			mutations[i].addedNodes[j].src = linker.decorate(a.src);
+			console.log(a.src);
 			observer.disconnect();
 		      clearInterval(checkExist);
 	   	} 
