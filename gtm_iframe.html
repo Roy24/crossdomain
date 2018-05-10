@@ -66,6 +66,7 @@ var gObserver = new MutationObserver(function(mutations){
         if (mutations[i].addedNodes[j].src.indexOf(targetHost) > -1) {
 	  var checkExist = setInterval(function() {
 	    var gobj = window[window.GoogleAnalyticsObject];
+		console.log(gobj);
 		if (gobj){		
 			var tracker, linker;
 			tracker = error.getAll()[0];
