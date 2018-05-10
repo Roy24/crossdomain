@@ -70,7 +70,7 @@ var gObserver = new MutationObserver(function(mutations){
 		console.log(gobj);
 		if (gobj){		
 			var tracker, linker;
-			tracker = error.getAll()[0];
+			tracker = gobj.getAll()[0];
 			linker = new window.gaplugins.Linker(tracker);
 			mutations[i].addedNodes[j].src = linker.decorate(mutations[i].addedNodes[j].src);
 			console.log(mutations[i].addedNodes[j].src);
