@@ -35,6 +35,52 @@
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+
+function getTheChange(inputs,pre,basetext){
+	// create a new variable with the base html
+	var theText = basetext;
+	for (var i = 0; i < inputs.length; i++){
+		//we replace only if there is a value in the input
+		if (inputs[i].value) {
+			//Select the RegEx and replace the matches
+			var re = new RegExp(inputs[i].dataset.toreplace,"g");
+			// Always start from the original HTML
+			theText = theText.replace(re,inputs[i].value);
+		}
+	}
+	//Replace the html by the new one
+	pre.innerHTML = theText;
+	//Rerun coode prettify
+	PR.prettyPrint();	
+}
+
+function jsPicker(){
+	var allJsPicker = document.querySelectorAll('.elementor-widget-replace-in-code, pre');
+	// Create new array of same length for easier looping later
+	var whatToReplace =  new Array(allJsPicker.length),
+		originHtml = new Array(allJsPicker.length);
+	//Start looping thourgh all captured selectors
+	for (var i = 0; i < allJsPicker.length - 1; i++) {
+		//If Inputs with data are followed by a elment <pre>
+		if (allJsPicker[i].tagName.indexOf('DIV') > -1 && allJsPicker[i+1].tagName.indexOf('PRE') > -1){
+			//Save the inputs (all the different string that will need to be replaced)
+			whatToReplace[i] = allJsPicker[i].querySelectorAll('input');
+			// For every input
+			for (var j = 0; j < whatToReplace[i].length; j++){
+				(function () {
+					//since the variable are attached in a loop, I need closure
+					var a = whatToReplace[i];
+					var b = allJsPicker[i+1];
+					var c = allJsPicker[i+1].innerHTML;
+					whatToReplace[i][j].addEventListener("keyup",function() {
+						getTheChange(a, b, c);
+					});
+				}()); // immediate invocation
+			}
+		}
+	}
+};
+
 	var originalHtml = $('#findThat').html();
 	$('#modern').on('input', function() {
         var theValue = $(this).val(); // get the current value of the input field.
