@@ -62,8 +62,7 @@ var gObserver = new MutationObserver(function(mutations){
     for (var j=0; j < mutations[i].addedNodes.length; j++){
       // We're iterating through _all_ the elements as the parser parses them,
       // deciding if they're the one we're looking for.
-	console.log(mutations[i].addedNodes[j]);
-      /*if (mutations[i].addedNodes[j].matches(gIframe)){
+      if (mutations[i].addedNodes[j].tagName == "IFRAME"){
         console.log(mutations[i].addedNodes[j].src);
         if (mutations[i].addedNodes[j].src.indexOf(targetHost) > -1) {
           var gobj = window[window.GoogleAnalyticsObject], tracker, linker;
@@ -72,7 +71,7 @@ var gObserver = new MutationObserver(function(mutations){
           mutations[i].addedNodes[j].src = linker.decorate(mutations[i].addedNodes[j].src);
           observer.disconnect();
 	}
-      }*/
+      }
     }
   }
 });
