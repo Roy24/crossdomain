@@ -262,6 +262,23 @@ dataLayer.push({
    }*/
 });
 </script>
+    
+  
+      <script type="text/javascript">
+window.addEventListener("load", gTracking, false);
+function gTracking() {
+	if(window.location.href.indexOf("contact") > -1) {
+	  var checkExist = setInterval(function() {
+			var t1 = document.querySelector('#response-container').innerText;
+			if(t1.indexOf("Message Sent Successfully") > -1) {
+				ga('send', 'event', 'formulaire', 'envoyé');
+	      clearInterval(checkExist);
+	   } 
+	  }, 1000);
+	}
+}
+</script>
+
 
   </body>
 </html>
