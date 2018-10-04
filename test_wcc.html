@@ -11,6 +11,11 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-875206672');
+  gtag('config', 'UA-12345678-1',{
+   'linker': {
+    'domains': ['github.io','mymovietimeline.com']
+  }
+);
 </script>
 <!-- Event snippet for Clicks on phone number conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
@@ -35,7 +40,9 @@ function gtag_report_conversion(url) {
 </head>
 <body>
  <p>My phone number is <a id="phone" href='#'>01 23 45 67 98</a>!!!</p>
- 
+ <p>
+<a href="https://www.mymovietimeline.com/">Click here please</a>
+ </p>
  <script>
   document.querySelector('#phone').onClick = function gtag_report_conversion();
   </script>
