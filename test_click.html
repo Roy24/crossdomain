@@ -10,6 +10,18 @@
 
   gtag('config', 'AW-875206672');
 </script>
+<script type="text/javascript">
+/* Script is loaded when the page is */
+window.addEventListener("DOMContentLoaded", gTracking, false);
+function gTracking() {
+	/* Check if page URL contains a part (test_click.html here) */
+	if(window.location.href.indexOf("test_click.html") > -1) {
+          document.querySelector("#ct").addEventListener("click",function(){
+             gtag('event', 'conversion', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED'});
+         });
+	}
+}
+</script>
 	
 
 	<script>/*
