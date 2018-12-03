@@ -12,6 +12,10 @@
 </script>
 	
 <script type="text/javascript">
+	
+
+	
+	
 /* Script is loaded when the page is */
 	
 /* Script is loaded when the page is */
@@ -21,7 +25,9 @@ function gTracking() {
 	/* Check if page URL contains a part (test_click.html here) */
 	if(window.location.href.indexOf("test_click.html") > -1) {
           document.querySelector("#ct").addEventListener("click",function(){
-             gtag('event', 'conversion', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED'});
+             gtag('event', 'conversion', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED',
+      'value': g_id,
+      'transaction_id': 'dfgdfre3432'});
              gtag('event', 'click', {'event_category': 'click'});
          });
 	}
