@@ -49,5 +49,40 @@ function gTracking() {
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	
+	
+	
+	
+<script>	
+if(window.location.href.indexOf("checkout") > -1) {
+    var transaction = [];
+    var transactionId = document.getElementsByClassName('orderdetails')[0].innerText.match(/\d+/)[0].trim();
+
+    var total = document.querySelector('#aggregation > div.totalamount.row > p > strong').innerText.replace('€','').trim();
+    var productsList=[];
+    for (var i = 0 ; i < document.querySelectorAll(".basket_details").length; i++) {
+        var sku = document.getElementsByClassName('ordernumber')[i].childNodes[2].textContent.trim()
+        var name =  document.getElementsByClassName('title')[i].innerText
+        var price = document.getElementsByClassName('textright')[i+1].innerText.replace('€*','').trim();
+        var quantity = document.querySelectorAll(".type-1>.qty-col")[i].innerText.match(/\d+/)[0].trim();
+        var product = {
+            'sku': sku,
+            'name': name,
+            'price': price,
+            'quantity': quantity 
+        };
+        productsList.push(product);
+    };
+
+    transaction.push({
+    'transactionId': transactionId,
+    'transactionTotal': total,
+    'transactionProducts': productsList
+    });
+
+    localStorage.removeItem('transactionData');
+    localStorage.setItem('transactionData',JSON.stringify(transaction));
+}
+</script>
+	
 
 </body>
