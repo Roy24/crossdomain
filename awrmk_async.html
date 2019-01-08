@@ -84,5 +84,15 @@ if(window.location.href.indexOf("checkout") > -1) {
 }
 </script>
 	
+	
+	
+<script>
+var transactionAfter = JSON.parse(localStorage.getItem('transactionData'));
+dataLayer.push(transactionAfter[0]);
+dataLayer.push({'event' : 'gtm.ecommerce'});
+  
+localStorage.clear();
+</script>
+	
 
 </body>
