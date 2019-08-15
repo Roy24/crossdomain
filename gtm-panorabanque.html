@@ -50,7 +50,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // when the page loads. Otherwise, use an event when the transaction
 // data becomes available.
 </script>
-	
+	  
+dataLayer.push({
+  'ecommerce': {
+    'purchase': {
+      'actionField': {
+        'id': 'az234',                         // Transaction ID. Required for purchases and refunds.
+        'affiliation': 'Online Store',
+        'revenue': '0',                     // Total transaction value (incl. tax and shipping)
+        'tax':'0',
+        'shipping': '0'
+      },
+      'products': [{                            // List of productFieldObjects.
+        'name': 'Triblend Android T-Shirt',     // Name or ID is required.
+        'id': '12345',
+        'price': '15.25',
+        'brand': 'Google',
+        'category': 'Apparel',
+        'variant': 'Gray',
+        'quantity': 1,
+        'dimension3': 'Banque',
+        'dimension4': 'Ddoc',
+        'dimension5': 'SOCIETE GENERALE',
+        'dimension6': 'Revenus plus 1200',
+        'dimension7': 'oui',
+        'metric1': 1
+       }]
+    }
+  }
+});
 
   </body>
 </html>
