@@ -43,6 +43,22 @@ setInterval(GetClock,1000);
   gtag('config', 'AW-123456');
   gtag('config', 'G-Z0RKD3NWCD');
 </script>
+  <script type="text/javascript">
+	
+	
+window.addEventListener("DOMContentLoaded", gTracking, false);
+function gTracking() {
+	/* Check if page URL contains a part (test_click.html here) */
+	if(window.location.href.indexOf("time.html") > -1) {
+          document.querySelector("#container").addEventListener("click",function(){
+             gtag('event', 'purchase', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED',
+              'value': 10,
+              'transaction_id': 'dfgdfre3432'});
+             gtag('event', 'time_click', {'event_whatever': 'click'});
+         });
+	}
+}
+</script>
 
   
 </head>
