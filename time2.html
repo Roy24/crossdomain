@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>The Time</title> 
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<script type="text/javascript">
+function GetClock(){
+var d=new Date();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+":"+nsec+"";
+document.title=""+nhour+":"+nmin+":"+nsec+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+<style>
+  #container{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100%;
+  }
+  #clockbox{
+    font-family: 'Orbitron', sans-serif;
+    font-size:150px;
+  }
+</style>
+  
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82636217-1');
+  gtag('config', 'AW-123456');
+  gtag('config', 'G-Z0RKD3NWCD');
+</script>
+  <script type="text/javascript">
+window.addEventListener("DOMContentLoaded", gTracking, false);
+function gTracking() {
+	/* Check if page URL contains a part (test_click.html here) */
+	if(window.location.href.indexOf("time.html") > -1) {
+          document.querySelector("#container").addEventListener("click",function(){
+             gtag('event', 'purchase', {
+             'value': 10,
+              'transaction_id': 'dfgdfre3432'});
+             gtag('event', 'time_click', {'event_whatever': 'click'});
+         });
+	}
+}
+</script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="clockbox"></div>
+  </div>
+</body>
+</html>
