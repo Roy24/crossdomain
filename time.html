@@ -45,6 +45,7 @@ setInterval(GetClock,1000);
 </script>
 	
   <script type="text/javascript">
+	  var ID = Math.random().toString(36).substr(2, 10);
 window.addEventListener("DOMContentLoaded", gTracking, false);
 function gTracking() {
 	/* Check if page URL contains a part (test_click.html here) */
@@ -52,7 +53,10 @@ function gTracking() {
           document.querySelector("#container").addEventListener("click",function(){
              gtag('event', 'purchase', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED',
               'value': 10,
-              'transaction_id': 'dfgdfre3432'});
+              'transaction_id': ID});
+             gtag('event', 'purchase', {
+              'value': 10,
+              'transaction_id': ID});
              gtag('event', 'time_click', {'event_whatever': 'click'});
          });
 	}
