@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", gTracking, false);
 function gTracking() {
 	/* Check if page URL contains a part (test_click.html here) */
 	  var ID = Math.random().toString(36).substr(2, 10);
-	var value =parseInt(Math.random()*100);
+		var value =parseInt(Math.random()*100);
 	if(window.location.href.indexOf("time.html") > -1) {
           document.querySelector("#container").addEventListener("click",function(){
              gtag('event', 'purchase', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED',
