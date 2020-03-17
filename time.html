@@ -45,19 +45,38 @@ setInterval(GetClock,1000);
 </script>
 	
   <script type="text/javascript">
-	  var ID = Math.random().toString(36).substr(2, 10);
 	  
 window.addEventListener("DOMContentLoaded", gTracking, false);
 function gTracking() {
 	/* Check if page URL contains a part (test_click.html here) */
+	  var ID = Math.random().toString(36).substr(2, 10);
+	var value =parseInt(Math.random()*100);
 	if(window.location.href.indexOf("time.html") > -1) {
           document.querySelector("#container").addEventListener("click",function(){
              gtag('event', 'purchase', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED',
               'value': 10,
               'transaction_id': ID});
              gtag('event', 'purchase', {
-              'value': 10,
-              'transaction_id': ID});
+              'value': value,
+              'transaction_id': ID,  
+		     "currency": "EUR",
+  "shipping": Math.random()*10,
+  "items": [
+    {
+      "id": "C77890",
+      "name": "Android Warhol T-Shirt",
+      "quantity": 2,
+      "price": value/3*2
+    },
+    {
+      "id": "P67890",
+      "name": "Treble Clef Tank Top",
+      "category": "Apparel/T-Shirts",
+      "quantity": 1,
+      "price": value/3
+    }
+  ]
+}});
              gtag('event', 'time_click', {'event_whatever': 'click'});
          });
 	}
