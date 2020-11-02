@@ -55,6 +55,8 @@ function gTracking() {
              gtag('event', 'purchase', {'send_to': 'AW-875206672/OWE-CPThkowBEJCwqqED',
               'value': 10,
               'transaction_id': ID});
+		let RealURL = window.location.href;
+history.replaceState(null,null,'/myOwnURL');
              gtag('event', 'purchase', {
               'value': value,
               'transaction_id': ID,  
@@ -76,6 +78,8 @@ function gTracking() {
 		    }
 		  ]
 		});
+		  
+history.replaceState(null,null,RealURL);  
              gtag('event', 'time_click', {'event_whatever': 'click'});
          	});
              gtag('event', 'nt12', {
