@@ -80,6 +80,33 @@ dataLayer.push({
 });
 	
 
+dataLayer.push({
+  'event': 'purchase',
+  "transaction_id": ID,
+  "tax": 4.90,
+  "shipping": 5.99,
+  "coupon": "SUMMER_SALE",
+  'value': value,    
+	
+  'ecommerce': {
+    'items': [{
+      'item_name': 'Not a DOnut',
+      'item_id': '67890',
+      'price': '100.75',
+      'item_brand': 'Google',
+      'item_category': 'Apparel',
+      'item_category_2': 'Mens',
+      'item_category_3': 'Shirts',
+      'item_category_4': 'Tshirts',
+      'affiliation': 'Google online store',
+      'item_variant': 'Black',
+      'quantity': '1',
+        'coupon': 'coupon_legacy',
+        'item_coupon': 'coupon_gold'                          // Optional fields may be omitted or set to empty string.
+    }]
+  }
+});
+	
 
 </script>
 	
