@@ -38,6 +38,9 @@ setInterval(GetClock,1000);
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+gtag('config', 'UA-12345789-1', {
+  'cookie_expires': 28 * 24 * 60 * 60  // 28 days, in seconds
+});
 
   gtag('config', 'G-Z0RKD3NWCD');
 </script>
