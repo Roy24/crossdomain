@@ -24,7 +24,7 @@ dataLayer.push({
   'ecommerce': {
     'purchase': {
       'actionField': {
-        'id': ID,                         // Transaction ID. Required for purchases and refunds.
+        'id': ID+2,                         // Transaction ID. Required for purchases and refunds.
         'affiliation': 'Online Store',
         'revenue': value,                     // Total transaction value (incl. tax and shipping)
         'tax':'4.90',
@@ -59,6 +59,7 @@ dataLayer.push({
   "tax": 4.90,
   "shipping": 5.99,
   "coupon": "SUMMER_SALE",
+  "currency": "EUR",
   'value': value,    
 	
   'ecommerce': {
@@ -83,10 +84,11 @@ dataLayer.push({
 
 dataLayer.push({
   'event': 'purchase',
-  "transaction_id": ID,
+  "transaction_id": ID+3,
   "tax": 4.90,
   "shipping": 5.99,
   "coupon": "SUMMER_SALE",
+  "currency": "EUR",
   'value': value,    
 	
   'ecommerce': {
@@ -158,6 +160,7 @@ dataLayer.push({
   "tax": 4.90,
   "shipping": 5.99,
   "coupon": "SUMMER_SALE",
+  "currency": "EUR",
   'value': value,    
 	
   'ecommerce': {
@@ -185,6 +188,7 @@ dataLayer.push({
   "tax": 4.90,
   "shipping": 5.99,
   "coupon": "SUMMER_SALE",
+  "currency": "EUR",
   'value': value,    
 	
   'ecommerce': {
