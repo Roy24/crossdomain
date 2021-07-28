@@ -9,7 +9,7 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TWD5VFS');</script>
+})(window,document,'script','analyticsDataLayer','GTM-TWD5VFS');</script>
 <!-- End Google Tag Manager -->
 
 	
@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // Send transaction data with a pageview if available
 // when the page loads. Otherwise, use an event when the transaction
 // data becomes available.
-dataLayer.push({
+analyticsDataLayer.push({
   'event': 'purchase2',
   'ecommerce': {
     'purchase': {
@@ -53,7 +53,7 @@ dataLayer.push({
     }
   }});
 	
-dataLayer.push({
+analyticsDataLayer.push({
   'event': 'purchase',
   "transaction_id": ID,
   "tax": 4.90,
@@ -87,7 +87,7 @@ dataLayer.push({
 });
 	
 
-dataLayer.push({
+analyticsDataLayer.push({
   'event': 'purchase',
   "transaction_id": ID+3,
   "tax": 4.90,
@@ -125,12 +125,12 @@ dataLayer.push({
 // Send transaction data with a pageview if available
 // when the page loads. Otherwise, use an event when the transaction
 // data becomes available.
-dataLayer.push({
+analyticsDataLayer.push({
   'event': 'purchase2',
   'ecommerce': {
     'purchase': {
       'actionField': {
-        'id': ID,                         // Transaction ID. Required for purchases and refunds.
+        'id': ID+2,                         // Transaction ID. Required for purchases and refunds.
         'affiliation': 'Online Store',
         'revenue': value,                     // Total transaction value (incl. tax and shipping)
         'tax':'4.90',
@@ -159,7 +159,7 @@ dataLayer.push({
     }
   }});
 	
-dataLayer.push({
+analyticsDataLayer.push({
   'event': 'purchase',
   "transaction_id": ID,
   "tax": 4.90,
@@ -175,21 +175,27 @@ dataLayer.push({
       'price': '33.75',
       'item_brand': 'Google',
       'item_category': 'Apparel',
-      'item_category_2': 'Mens',
-      'item_category_3': 'Shirts',
-      'item_category_4': 'Tshirts',
+      'item_category2': 'Mens',
+      'item_category3': 'Shirts',
+      'item_category4': 'Tshirts',
       'affiliation': 'Google online store',
       'item_variant': 'Black',
       'quantity': '1',
         'coupon': 'coupon_legacy',
-        'item_coupon': 'coupon_gold'                          // Optional fields may be omitted or set to empty string.
+        'item_coupon': 'coupon_gold',                          // Optional fields may be omitted or set to empty string.
+	    
+      'new_awesome_dim': 'Apparel',
+      'korra_is_the_best': 'Mens',
+      'and_asami': 'Shirts',
+      'horizon': 'Tshirts',
     }]
   }
 });
+	
 
-dataLayer.push({
+analyticsDataLayer.push({
   'event': 'purchase',
-  "transaction_id": ID,
+  "transaction_id": ID+3,
   "tax": 4.90,
   "shipping": 5.99,
   "coupon": "SUMMER_SALE",
@@ -198,9 +204,9 @@ dataLayer.push({
 	
   'ecommerce': {
     'items': [{
-      'item_name': 'Donut Friday Scented T-Shirt',
+      'item_name': 'Not a DOnut',
       'item_id': '67890',
-      'price': '33.75',
+      'price': '100.75',
       'item_brand': 'Google',
       'item_category': 'Apparel',
       'item_category_2': 'Mens',
