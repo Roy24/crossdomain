@@ -37,6 +37,16 @@ setInterval(GetClock,1000);
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+	
+gtag('set', 'campaign', {
+  'id': 'abc.123',
+  'source': 'PlooKa',
+  'medium': 'cpc',
+  'name': 'spring_sale',
+  'term': 'running+shoes',
+  'content': 'logolink'
+});	
+	
 gtag('config', 'UA-12345789-1', {
   'cookie_expires': 28 * 24 * 60 * 60  // 28 days, in seconds
 });
