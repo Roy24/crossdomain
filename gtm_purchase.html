@@ -85,7 +85,7 @@ dataLayer.push({
 });
 	
 
-dataLayer.push({
+/*dataLayer.push({
   'event': 'purchase',
   "transaction_id": ID+3,
   "tax": 4.90,
@@ -111,7 +111,26 @@ dataLayer.push({
         'item_coupon': 'coupon_gold'                          // Optional fields may be omitted or set to empty string.
     }]
   }
-});
+});*/
+	
+	
+dataLayer.push({
+    'event': 'productClick',
+    'ecommerce': {
+      'click': {
+        'actionField': {'list': 'Search Results'},      // Optional list property.
+        'products': [{
+          'name': 'Korra da best',                      // Name or ID is required.
+          'id': 'korrasami',
+          'price': 999,
+          'brand': 'Avatar',
+          'category': 'Da best',
+          'variant': 'Bacl',
+          'position': 1
+         }]
+       }
+     }
+  });
 	
 
 </script>
